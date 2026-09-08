@@ -1,12 +1,22 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+
+import MainLayout from './layouts/MainLayout';
+import Dashboard from './pages/Dashboard';
+import Users from './pages/Users';
 
 function App() {
     return (
-        <div>
-            <h1>Inventaris YPVDP</h1>
-            <p>React berhasil terhubung dengan Laravel.</p>
-        </div>
+        <BrowserRouter>
+            <MainLayout>
+                <Routes>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/users" element={<Users />} />
+                    <Route path="/" element={<Navigate to="/dashboard" replace />} />
+                </Routes>
+            </MainLayout>
+        </BrowserRouter>
     );
 }
 
