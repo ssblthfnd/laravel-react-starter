@@ -48,7 +48,7 @@ Clone repository starter ke komputer lokal.
 Buka terminal, lalu jalankan:
 
 ```bash
-git clone https://github.com/ssblthfnd/laravel-react-starter.git
+git clone https://github.com/ssblthfnd/laravel-react-starter.git <NAMA APLIKASI>
 ```
 
 ### 2. Masuk ke folder project
